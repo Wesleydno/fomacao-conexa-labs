@@ -52,6 +52,7 @@ h3 {
 
 p {
   color: var(--title-color);
+  margin-bottom: 1em;
 }
 
 li {
@@ -180,3 +181,5 @@ a {
   max-width: 1320px;
   padding: 1rem 1.5rem;
 }
+
+/* - main - */
