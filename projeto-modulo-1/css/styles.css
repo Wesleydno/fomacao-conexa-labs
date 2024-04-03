@@ -6,7 +6,7 @@
   --secondary-color: #1c7cc7;
   --body-font: "Poppins", sans-serif;
   --normal-font-size: .938rem;
-  --title-font: 'Raleway', sans-serif;
+  --title-color: #212529;
 }
 
 html {
@@ -48,6 +48,10 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
+}
+
+p {
+  color: var(--title-color);
 }
 
 li {
