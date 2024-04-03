@@ -3,7 +3,7 @@
 
 :root {
   --primary-color: #2e6a00;
-  --secondary-color: #fff;
+  --secondary-color: #1c7cc7;
   --body-font: "Poppins", sans-serif;
   --normal-font-size: .938rem;
 }  
@@ -31,3 +31,47 @@ html {
 a {
     text-decoration: none;
 }
+
+.nav-wrapper {
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
+.header{
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.nav-logo span{
+  color: var(--secondary-color);
+  font-weight: 300;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link{
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
