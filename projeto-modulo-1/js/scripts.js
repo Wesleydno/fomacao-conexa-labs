@@ -36,7 +36,9 @@ function closeMenu() {
       });
   }
 
-  function exibirDetalhesCultura(cultura) {}
+  function exibirDetalhesCultura(cultura) {
+    console.log('Cultura selecionada:', cultura);
+  }
 
   function culturaTemplate(cultura) {}
 
@@ -45,7 +47,12 @@ function closeMenu() {
     fetch(basePath)
       .then(response => response.json())
       .then(data => {
-        console.log('teste',data);
+        const cultura = data.culturas.find(c => c.nome === culturaSelecionada);
+        if (cultura) {
+          exibirDetalhesCultura(cultura);
+        } else {
+          detalhesCultura.innerHTML = "<p>Cultura não encontrada</p>";
+        }
       })
       .catch(error => console.error("Erro ao buscar detalhes da cultura:", error));
   }
