@@ -17,8 +17,17 @@ function closeMenu() {
 
 // script responsável por popular a sessão culturas
 
-  function carregarCulturas() {}
+  const basePath = 'data/culturas.json';
 
+  function carregarCulturas() {
+    fetch(basePath)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => console.error("Erro ao carregar o JSON:", error));
+  }
+  carregarCulturas();
   function adicionarOpcoesCulturas(culturas) {}
 
   function exibirDetalhesCultura(cultura) {}
