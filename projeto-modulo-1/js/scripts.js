@@ -14,3 +14,15 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
+
+// script responsável por popular a sessão culturas
+
+  function carregarCulturas() {}
+
+  function adicionarOpcoesCulturas(culturas) {}
+
+  function exibirDetalhesCultura(cultura) {}
+
+  function culturaTemplate(cultura) {}
+
+  function handleChangeSelect() {}
