@@ -191,13 +191,22 @@ a {
 
 .alignright {
   float: right;
-  margin-right: 10px;
+}
+
+.alignleft {
+  float: left;
 }
 
 article img {
   max-width: 100%;
   margin: 10px;
   clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  article img {
+    margin: 10px 0;
+  }
 }
 
 /* - main - */
@@ -382,5 +391,3 @@ picture img{
   width: 100%;
   box-sizing: border-box; 
 }
-
-
