@@ -40,6 +40,16 @@ function closeMenu() {
 
   function culturaTemplate(cultura) {}
 
-  function handleChangeSelect() {}
+  function handleChangeSelect() {
+    const culturaSelecionada = selectCulturas.value;
+    fetch(basePath)
+      .then(response => response.json())
+      .then(data => {
+        console.log('teste',data);
+      })
+      .catch(error => console.error("Erro ao buscar detalhes da cultura:", error));
+  }
 
   carregarCulturas();
+
+  selectCulturas.addEventListener("change", handleChangeSelect);
