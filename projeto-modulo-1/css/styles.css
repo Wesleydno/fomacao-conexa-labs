@@ -53,6 +53,14 @@ a {
   text-decoration: none;
 }
 
+.primary-color{
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
 /* -- Navbar -- */
 
 .nav-wrapper {
@@ -291,8 +299,19 @@ footer {
   background-color: var(--primary-color);
 }
 
-footer p,
-a {
+footer p, a {
   color: var(--white-color);
   margin: 0;
+}
+
+/*  -- breadcrumbs -- */
+
+#breadcrumbs a{
+  text-decoration: none !important;
+  color: #2e6a00 !important;
+  font-weight: 600 !important;
+}
+
+#breadcrumbs .separator {
+  font-size: 1.25rem;
 }
