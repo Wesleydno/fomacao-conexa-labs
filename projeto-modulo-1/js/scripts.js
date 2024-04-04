@@ -18,20 +18,28 @@ function closeMenu() {
 // script responsável por popular a sessão culturas
 
   const basePath = 'data/culturas.json';
+  const selectCulturas = document.getElementById("culturas");
 
   function carregarCulturas() {
     fetch(basePath)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    })
-    .catch(error => console.error("Erro ao carregar o JSON:", error));
+      .then(response => response.json())
+      .then(data => adicionarOpcoesCulturas(data.culturas))
+      .catch(error => console.error("Erro ao carregar o JSON:", error));
   }
-  carregarCulturas();
-  function adicionarOpcoesCulturas(culturas) {}
+
+  function adicionarOpcoesCulturas(culturas) {
+    culturas.forEach(cultura => {
+        const option = document.createElement("option");
+        option.textContent = cultura.nome;
+        option.value = cultura.nome;
+        selectCulturas.appendChild(option);
+      });
+  }
 
   function exibirDetalhesCultura(cultura) {}
 
   function culturaTemplate(cultura) {}
 
   function handleChangeSelect() {}
+
+  carregarCulturas();
