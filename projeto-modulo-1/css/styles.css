@@ -40,19 +40,6 @@ h3 {
   margin: 20px 0;
 }
 
-h1 {
-  font-size: 1.875rem;
-  line-height: 0.85;
-}
-
-h2 {
-  font-size: 1.063rem;
-}
-
-h3 {
-  font-size: 0.995rem;
-}
-
 p {
   color: var(--title-color);
   margin-bottom: 1em;
@@ -65,7 +52,6 @@ li {
 a {
   text-decoration: none;
 }
-
 
 /* -- Navbar -- */
 
@@ -194,6 +180,17 @@ a {
   padding: 1rem 1.5rem;
 }
 
+.alignright {
+  float: right;
+  margin-right: 10px;
+}
+
+article img {
+  max-width: 100%;
+  margin: 10px;
+  clear: both;
+}
+
 /* - main - */
 
 /*  - tabela - */
@@ -229,22 +226,27 @@ tr:nth-child(even) {
     border: none;
   }
 
-  table, thead, tbody, th, td, tr {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
     display: block;
   }
-  
+
   thead {
     display: none;
   }
 
   tbody tr {
     margin-bottom: 20px;
-    border: 1px solid  var(--table-border-color);
+    border: 1px solid var(--table-border-color);
   }
 
   td {
     border: none;
-    border-bottom: 1px solid  var(--table-background-color);
+    border-bottom: 1px solid var(--table-background-color);
     position: relative;
     padding-left: 50%;
     text-align: right;
@@ -259,11 +261,25 @@ tr:nth-child(even) {
     white-space: nowrap;
   }
 
-  td:nth-of-type(1):before { content: "Estado"; }
-  td:nth-of-type(2):before { content: "Principal Cultura"; }
-  td:nth-of-type(3):before { content: "Área Cultivada (ha)"; }
-  td:nth-of-type(4):before { content: "Produção Total (ton)"; }
-  td:nth-of-type(5):before { content: "VL Produção (milhões de R$)"; }
+  td:nth-of-type(1):before {
+    content: "Estado";
+  }
+
+  td:nth-of-type(2):before {
+    content: "Principal Cultura";
+  }
+
+  td:nth-of-type(3):before {
+    content: "Área Cultivada (ha)";
+  }
+
+  td:nth-of-type(4):before {
+    content: "Produção Total (ton)";
+  }
+
+  td:nth-of-type(5):before {
+    content: "VL Produção (milhões de R$)";
+  }
 }
 
 /* -- Footer -- */
@@ -275,7 +291,8 @@ footer {
   background-color: var(--primary-color);
 }
 
-footer p, a {
+footer p,
+a {
   color: var(--white-color);
   margin: 0;
 }
