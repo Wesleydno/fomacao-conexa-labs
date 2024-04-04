@@ -19,6 +19,7 @@ function closeMenu() {
 
   const basePath = 'data/culturas.json';
   const selectCulturas = document.getElementById("culturas");
+  const detalhesCultura = document.getElementById("detalhes-cultura");
 
   function carregarCulturas() {
     fetch(basePath)
@@ -37,10 +38,18 @@ function closeMenu() {
   }
 
   function exibirDetalhesCultura(cultura) {
-    console.log('Cultura selecionada:', cultura);
+    detalhesCultura.innerHTML = culturaTemplate(cultura);
   }
 
-  function culturaTemplate(cultura) {}
+  function culturaTemplate(cultura) {
+    return `
+    <h2>${cultura.nome}</h2>
+    <p>${cultura.descricao}</p>
+    <p><strong>Principal produtor:</strong> ${cultura.principal_produtor}</p>
+    <p><strong>Produtores:</strong> ${cultura.estados_produtores.join(", ")}</p>
+    <img src="${cultura.link_imagem}" alt="Imagem da cultura ${cultura.nome}">
+  `;
+  }
 
   function handleChangeSelect() {
     const culturaSelecionada = selectCulturas.value;
