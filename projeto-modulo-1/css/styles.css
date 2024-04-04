@@ -327,3 +327,41 @@ hr {
 picture img{
   border-radius: 2%;
 }
+
+/* culturas */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.texto {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+  padding-right: 1.5rem;
+}
+
+.menu {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; 
+    width: 100%;
+  }
+
+  .texto,
+  .menu {
+    width: 100%;
+  }
+}
