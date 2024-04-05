@@ -9,6 +9,33 @@ document.addEventListener("DOMContentLoaded", function () {
       this._templateHtml = templateHtml;
     }
 
+    async carregarDados() {
+      try {
+        const resposta = await fetch(this._pathData);
+        const dados = await resposta.json();
+        const dadosArray = Object.values(dados).find(Array.isArray);
+        
+        if (dadosArray) {
+          this._dados = dadosArray.map(item => new ObjetoGenerica(item));
+        } else {
+          console.error("Nenhuma array encontrada nos dados.");
+        }
+      } catch (erro) {
+        console.error("Erro ao carregar o JSON:", erro);
+      }
+    }
+
+  }
+
+  class Estrutura {
+    constructor(data) {
+      this.nome = data.nome;
+      for (const chave in data) {
+        if (data.hasOwnProperty(chave) && chave !== "nome") {
+          this[chave] = data[chave];
+        }
+      }
+    }
   }
   
   const pathData = 'data/culturas.json';
