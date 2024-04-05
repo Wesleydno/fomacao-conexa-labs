@@ -16,13 +16,23 @@ document.addEventListener("DOMContentLoaded", function () {
         const dadosArray = Object.values(dados).find(Array.isArray);
         
         if (dadosArray) {
-          this._dados = dadosArray.map(item => new ObjetoGenerica(item));
+          this._dados = dadosArray.map(item => new Estrutura(item));
         } else {
           console.error("Nenhuma array encontrada nos dados.");
         }
       } catch (erro) {
         console.error("Erro ao carregar o JSON:", erro);
       }
+    }
+
+    preencherSelect() {
+      console.log(this._dados);
+    }
+
+    inicializar() {
+      this.carregarDados().then(() => {
+        this.preencherSelect();
+      });
     }
 
   }
@@ -51,6 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
   
   const appCulturas = new App(pathData, pathImages, idSelect, idDetalhes, templateHtmlCultura);
-  console.log(appCulturas)
+  appCulturas.inicializar();
 
 });
