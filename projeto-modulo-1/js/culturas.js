@@ -26,10 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
       function culturaTemplate(cultura) {
         return `
         <h2>${cultura.nome}</h2>
-        <p>${cultura.descricao}</p>
+        <p><img src="${cultura.link_imagem}"  width="400px" height="300px" class="alignleft" alt="Imagem da cultura ${cultura.nome}">${cultura.descricao}</p>
         <p><strong>Principal produtor:</strong> ${cultura.principal_produtor}</p>
         <p><strong>Produtores:</strong> ${cultura.estados_produtores.join(", ")}</p>
-        <img src="${cultura.link_imagem}" alt="Imagem da cultura ${cultura.nome}">
       `;
       }
     
