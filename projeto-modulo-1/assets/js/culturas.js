@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
       const basePath = 'data/culturas.json';
+      const culturasPath = 'assets/images/culturas/'
       const selectCulturas = document.getElementById("culturas");
       const detalhesCultura = document.getElementById("detalhes-cultura");
     
@@ -26,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
       function culturaTemplate(cultura) {
         return `
         <h2>${cultura.nome}</h2>
-        <p><img src="${cultura.link_imagem}"  width="400px" height="300px" class="alignleft" alt="Imagem da cultura ${cultura.nome}">${cultura.descricao}</p>
+        <p><img src="${culturasPath}${cultura.link_imagem}"  width="400px" height="300px" class="alignleft" alt="Imagem da cultura ${cultura.nome}">${cultura.descricao}</p>
         <p><strong>Principal produtor:</strong> ${cultura.principal_produtor}</p>
         <p><strong>Produtores:</strong> ${cultura.estados_produtores.join(", ")}</p>
       `;
