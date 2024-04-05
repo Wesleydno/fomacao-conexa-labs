@@ -9,8 +9,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
- const cultura = (new Cultura('Goiás', 'descricao', 'Mato Grosso ', 'Mato Grosso do Sul, Minas Gerais', 'goias.jpg'));
+  class App {
+    constructor(pathData, pathImages, idSelect, idDetalhes) {
+      this.pathData = pathData;
+      this.pathImages = pathImages;
+      this.select = document.getElementById(idSelect);
+      this.detalhes = document.getElementById(idDetalhes);
+      this.allData = [];
+    }
+  }   
 
- console.log(cultura);
+  const pathData = 'data/culturas.json';
+  const pathImages = 'assets/images/culturas/';
+  const idSelect = "culturas";
+  const idDetalhes = "detalhes-cultura";
+
+  const app = new App(pathData, pathImages, idSelect, idDetalhes);
+
+  console.log(app);
+
 
 });
