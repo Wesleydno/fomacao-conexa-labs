@@ -25,4 +25,11 @@ Lembrando que sempre há espaço para melhorias, as quais pretendo abordar nos p
 
 Cada passo foi devidamente documentado na sequência de commits.
 
+
+### Como rodar o projeto ?
+
+Utilize a extensão [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) no Visual Studio Code para executar o projeto e evitar problemas de CORS policy.
+
+![Página de Início](docs/live-server.jpg)
+
 😊
