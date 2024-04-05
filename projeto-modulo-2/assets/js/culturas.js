@@ -26,7 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     preencherSelect() {
-      console.log(this._dados);
+      this._dados.forEach(item => {
+        const opcao = document.createElement("option");
+        opcao.textContent = item.nome;
+        opcao.value = item.nome;
+        this._select.appendChild(opcao);
+      });
     }
 
     inicializar() {
