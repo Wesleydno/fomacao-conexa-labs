@@ -9,11 +9,10 @@ Durante este primeiro módulo, pude aplicar os conhecimentos adquiridos nos segu
 
 A proposta inicial foi desenvolver um portal de notícias com foco no agronegócio e na influência direta da tecnologia em seu crescimento. Para iniciar, criei três páginas principais: início, culturas e tecnologia.
 
-* Início
 ![Página de Início](pagina-inicial.png)
-* Culturas
+
 ![Página de Início](pagina-culturas.png)
-* Tecnologia
+
 ![Página de Início](pagina-tecnologia.png)
 
 Utilizei HTML5 para estruturar as páginas, aproveitando ao máximo as principais tags disponíveis. A estilização foi mantida consistente em todas as telas, aplicando vários conceitos do CSS3.
