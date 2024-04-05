@@ -34,6 +34,26 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
 
+    exibirDetalhes(item) {
+      this._detalhes.innerHTML = this.template(item);
+    }
+  
+    template(item) {
+      let html = this._templateHtml;
+      for (const prop in item) {
+        if (item.hasOwnProperty(prop)) {
+          let valor = item[prop];
+          if (prop === 'link_imagem') {
+            valor = this._caminhoBaseImagens + valor;
+          } else if (prop === 'estados_produtores') {
+            valor = valor.join(", ");
+          }
+          html = html.replace(new RegExp(`{{${prop}}}`, 'g'), valor);
+        }
+      }
+      return html;
+    }
+
     inicializar() {
       this.carregarDados().then(() => {
         this.preencherSelect();
