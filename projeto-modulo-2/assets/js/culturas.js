@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const resposta = await fetch(this._pathData);
         const dados = await resposta.json();
         const dadosArray = Object.values(dados).find(Array.isArray);
-        
+
         if (dadosArray) {
           this._dados = dadosArray.map(item => new Estrutura(item));
         } else {
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     exibirDetalhes(item) {
       this._detalhes.innerHTML = this.template(item);
     }
-  
+
     template(item) {
       let html = this._templateHtml;
       for (const prop in item) {
@@ -54,12 +54,22 @@ document.addEventListener("DOMContentLoaded", function () {
       return html;
     }
 
+    async handleChangeSelect() {
+      const itemSelecionado = this._select.value;
+      const item = this._dados.find(objeto => objeto.nome === itemSelecionado);
+      if (item) {
+        this.exibirDetalhes(item);
+      } else {
+        this._detalhes.innerHTML = "<p>Item não encontrado</p>";
+      }
+    }
+
     inicializar() {
+      this._select.addEventListener("change", this.handleChangeSelect.bind(this));
       this.carregarDados().then(() => {
         this.preencherSelect();
       });
     }
-
   }
 
   class Estrutura {
@@ -72,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
-  
+
   const pathData = 'data/culturas.json';
   const pathImages = 'assets/images/culturas/'
   const idSelect = "culturas";
@@ -84,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
   <p><strong>Principal produtor:</strong> {{principal_produtor}}</p>
   <p><strong>Produtores:</strong> {{estados_produtores}}</p>
   `;
-  
+
   const appCulturas = new App(pathData, pathImages, idSelect, idDetalhes, templateHtmlCultura);
   appCulturas.inicializar();
 
