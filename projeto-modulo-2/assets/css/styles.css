@@ -1,0 +1,418 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --primary-color: #2e6a00;
+  --secondary-color: #1c7cc7;
+  --body-font: "Poppins", sans-serif;
+  --normal-font-size: .938rem;
+  --title-color: #212529;
+  --table-border-color: #dee1e6;
+  --table-background-color: #f2f2f2;
+  --white-color: #fff;
+  --hr-color: #BFBFBF;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--body-font);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+p {
+  color: var(--title-color);
+  margin-bottom: 1em;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+/* -- Navbar -- */
+
+.nav-wrapper {
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.nav-logo span {
+  color: var(--secondary-color);
+  font-weight: 300;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+/* -- Navbar Hamburger-- */
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: var(--white-color);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow:
+      0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+}
+
+/* headline */
+
+.headline {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 20px 0;
+}
+
+.headline.principal {
+  text-align: center;
+}
+
+.headline h1 {
+  font-size: 1.875rem;
+}
+
+.headline h2 {
+  font-size: 1.063rem;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 1rem 1.5rem;
+}
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+article img {
+  max-width: 100%;
+  margin: 10px;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  article img {
+    margin: 10px 0;
+  }
+}
+
+/* - main - */
+
+/*  - tabela - */
+
+.table {
+  margin-top: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid var(--table-border-color);
+}
+
+td:first-child {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 16px;
+  border: 1px solid var(--table-border-color);
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-background-color);
+}
+
+@media screen and (max-width: 600px) {
+  .table {
+    border: none;
+  }
+
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tbody tr {
+    margin-bottom: 20px;
+    border: 1px solid var(--table-border-color);
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid var(--table-background-color);
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  td:before {
+    position: absolute;
+    text-align: left;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  td:nth-of-type(1):before {
+    content: "Estado";
+  }
+
+  td:nth-of-type(2):before {
+    content: "Principal Cultura";
+  }
+
+  td:nth-of-type(3):before {
+    content: "Área Cultivada (ha)";
+  }
+
+  td:nth-of-type(4):before {
+    content: "Produção Total (ton)";
+  }
+
+  td:nth-of-type(5):before {
+    content: "VL Produção (milhões de R$)";
+  }
+}
+
+/* -- Footer -- */
+
+footer {
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+}
+
+footer p,
+a {
+  color: var(--white-color);
+  margin: 0;
+}
+
+/*  -- breadcrumbs -- */
+
+#breadcrumbs a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+#breadcrumbs .separator {
+  font-size: 1.25rem;
+}
+
+hr {
+  margin: 1rem 0;
+  color: inherit;
+  border: 0;
+  border-top: 1px solid var(--hr-color);
+}
+
+picture img {
+  border-radius: 2%;
+}
+
+/* culturas */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.texto {
+  flex: 0 0 auto;
+  width: 75%;
+  padding-right: 1.5rem;
+}
+
+.menu {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .texto,
+  .menu {
+    width: 100%;
+  }
+
+}
+
+/* -- Culturas -- */
+
+.cultura-vazio {
+  padding: 40px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.select-culturas label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.select-culturas select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#detalhes-cultura p {
+  text-align: justify;
+}
+
+#detalhes-cultura img {
+  border-radius: 4px;
+  margin: 0;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  #detalhes-cultura img {
+    min-height: 100%;
+    min-width: 100%;
+    margin-bottom: 15px;
+  }
+
+}
