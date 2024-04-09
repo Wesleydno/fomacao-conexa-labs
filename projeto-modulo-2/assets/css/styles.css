@@ -389,7 +389,8 @@ picture img {
   margin-bottom: 0.5rem;
 }
 
-.select-culturas select {
+.select-culturas select, 
+.select-estados select {
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
