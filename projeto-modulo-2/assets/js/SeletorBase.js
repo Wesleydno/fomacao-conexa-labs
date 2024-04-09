@@ -39,25 +39,44 @@ class SeletorBase {
     }
   
     template(items) {
-      let html = '';
-      items.forEach(item => {
+        if (Array.isArray(items)) {
+            return this.renderArray(items);
+        } else if (typeof items === 'object') {
+            return this.renderObject(items);
+        } else {
+            console.error('Os dados fornecidos não são válidos.');
+            return '';
+        }
+    }
+
+    renderArray(items) {
+        let html = '';
+        items.forEach(item => {
+            html += this.renderItem(item);
+        });
+        return html;
+    }
+    
+    renderObject(item) {
+        return this.renderItem(item);
+    }
+    
+    renderItem(item) {
         let itemHtml = this._templateHtml;
         for (const prop in item) {
-          if (item.hasOwnProperty(prop)) {
-            let valor = item[prop];
-            if (prop === 'link_imagem') {
-              valor = this._pathImages + valor;
-            } else if (prop === 'estados_produtores' && Array.isArray(valor)) {
-              valor = valor.join(", ");
+            if (item.hasOwnProperty(prop)) {
+                let valor = item[prop];
+                if (prop === 'link_imagem') {
+                    valor = this._pathImages + valor;
+                } else if (prop === 'estados_produtores' && Array.isArray(valor)) {
+                    valor = valor.join(", ");
+                }
+                itemHtml = itemHtml.replace(new RegExp(`{{${prop}}}`, 'g'), valor);
             }
-            itemHtml = itemHtml.replace(new RegExp(`{{${prop}}}`, 'g'), valor);
-          }
         }
-        html += itemHtml;
-      });
-      return html;
+        return itemHtml;
     }
-  
+    
     async handleChangeSelect() {
       const itemSelecionado = this._select.value;
       const item = this._dados.find(objeto => objeto.nome === itemSelecionado);
