@@ -4,6 +4,19 @@ class Produtores extends SeletorBase {
   constructor(pathData, pathImages, idSelect, idDetalhes, templateHtml) {
     super(pathData, pathImages, idSelect, idDetalhes, templateHtml);
   }
+
+  handleChangeSelect() {
+    const estadoSelecionado = this._select.value;
+    const item = this._dados.filter(cultura => {
+      return cultura.estados_produtores.includes(estadoSelecionado) || cultura.principal_produtor === estadoSelecionado;
+    });
+
+    if (item.length) {
+      this.exibirDetalhes(item);
+    } else {
+      this._detalhes.innerHTML = `<div class="cultura-vazio"><em>Item não encontrado</em></div>`;
+    }
+  }
 }
 
 const pathData = 'data/culturas.json';
