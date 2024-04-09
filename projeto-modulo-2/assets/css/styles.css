@@ -343,7 +343,7 @@ picture img {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .row {
@@ -384,7 +384,8 @@ picture img {
   font-size: 1rem;
 }
 
-.select-culturas label {
+.select-culturas label,
+.select-estados label {
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -403,6 +404,10 @@ picture img {
   text-align: justify;
 }
 
+#detalhes-cultura article {
+  margin-bottom: 100px;
+}
+
 #detalhes-cultura img {
   border-radius: 4px;
   margin: 0;
@@ -415,5 +420,9 @@ picture img {
     min-width: 100%;
     margin-bottom: 15px;
   }
-
+  
+  #detalhes-cultura article {
+    margin: 0 auto;
+  }
+  
 }
