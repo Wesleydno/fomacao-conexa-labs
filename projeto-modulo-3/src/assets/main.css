@@ -22,6 +22,12 @@ a {
   text-decoration: none;
 }
 
+main {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 1rem 1.5rem;
+}
+
 .primary-color {
   color: var(--primary-color);
 }
