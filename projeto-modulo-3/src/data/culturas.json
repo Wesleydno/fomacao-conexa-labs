@@ -1,0 +1,134 @@
+{
+  "culturas": [
+      {
+          "nome": "Pecuária",
+          "descricao": "A pecuária é uma atividade essencial no setor agropecuário, envolvendo a criação e a produção de animais para diferentes fins, como alimentação, trabalho e obtenção de subprodutos. No Brasil, a pecuária desempenha um papel significativo na economia do país, contribuindo para o abastecimento interno e exportação de carne bovina, suína, aves e outros produtos de origem animal.",
+          "principal_produtor": "Mato Grosso",
+          "estados_produtores": [
+              "Amazonas",
+              "Mato Grosso do Sul",
+              "Rondônia",
+              "Roraima",
+              "Acre"
+          ],
+          "link_imagem": "pecuaria.jpg"
+      },
+      {
+          "nome": "Cana-de-açúcar",
+          "descricao": "A cana-de-açúcar é uma cultura amplamente cultivada no Brasil, especialmente nas regiões tropicais e subtropicais, devido ao clima favorável e ao solo adequado. É uma cultura versátil, utilizada na produção de açúcar, etanol, cachaça e outros produtos derivados. Além disso, a cana-de-açúcar desempenha um papel importante na geração de empregos e na economia de muitos estados brasileiros.",
+          "principal_produtor": "São Paulo",
+          "estados_produtores": [
+              "Alagoas",
+              "Pernambuco",
+              "Pará",
+              "Goiás",
+              "Sergipe",
+              "Paraíba"
+          ],
+          "link_imagem": "cana-de-acucar.jpg"
+      },
+      {
+          "nome": "Mandioca",
+          "descricao": "A mandioca é uma cultura de grande importância na agricultura brasileira, sendo uma fonte importante de carboidratos na alimentação humana e animal. Além disso, a mandioca é utilizada na produção de farinha, fécula, tapioca e outros produtos. Sua produção está concentrada principalmente em pequenas propriedades rurais, contribuindo para a segurança alimentar e a geração de renda em diversas regiões do país.",
+          "principal_produtor": "Pará",
+          "estados_produtores": [
+              "Bahia",
+              "Piauí",
+              "Amazonas",
+              "Tocantins",
+              "Amapá",
+              "Ceará"
+          ],
+          "link_imagem": "mandioca.jpg"
+      },
+      {
+          "nome": "Soja",
+          "descricao": "A soja é uma das principais culturas agrícolas do Brasil, sendo cultivada em larga escala principalmente nas regiões Centro-Oeste e Sul do país. É uma cultura versátil, utilizada na produção de óleo vegetal, farelo de soja, biodiesel, ração animal e outros produtos. A soja desempenha um papel importante na balança comercial brasileira, contribuindo significativamente para as exportações do país.",
+          "principal_produtor": "Mato Grosso",
+          "estados_produtores": [
+              "Paraná",
+              "Goiás",
+              "Mato Grosso do Sul",
+              "Tocantins"
+          ],
+          "link_imagem": "soja.jpg"
+      },
+      {
+          "nome": "Milho",
+          "descricao": "O milho é uma cultura amplamente cultivada no Brasil, sendo utilizada tanto na alimentação humana quanto na produção de ração animal, etanol, óleo vegetal, entre outros produtos. É uma cultura adaptável a diferentes condições climáticas e de solo, o que contribui para sua produção em diversas regiões do país. Além disso, o milho desempenha um papel importante na rotação de culturas e na sustentabilidade dos sistemas agrícolas.",
+          "principal_produtor": "Paraná",
+          "estados_produtores": [
+              "Mato Grosso",
+              "Minas Gerais",
+              "São Paulo",
+              "Rio Grande do Sul",
+              "Ceará"
+          ],
+          "link_imagem": "milho.jpg"
+      },
+      {
+          "nome": "Grãos e Hortaliças",
+          "descricao": "A produção de grãos e hortaliças abrange uma variedade de culturas, incluindo feijão, arroz, trigo, batata, cenoura, alface, entre outras. Essas culturas são fundamentais para a segurança alimentar e nutricional da população brasileira, fornecendo nutrientes essenciais e diversidade na dieta. A produção de grãos e hortaliças é realizada em diferentes estados do país, com destaque para as regiões Sul, Sudeste e Centro-Oeste.",
+          "principal_produtor": "Goiás",
+          "estados_produtores": [
+              "Mato Grosso",
+              "Paraná",
+              "São Paulo",
+              "Minas Gerais",
+              "Distrito Federal"
+          ],
+          "link_imagem": "graos-e-hortalicas.jpg"
+      },
+      {
+          "nome": "Café",
+          "descricao": "O café é uma das principais commodities agrícolas do Brasil, sendo cultivado em diversas regiões do país, com destaque para os estados de Minas Gerais, São Paulo, Espírito Santo e Bahia. Além de ser uma importante fonte de renda para milhares de produtores rurais, o café brasileiro é reconhecido mundialmente pela sua qualidade e diversidade de sabores. A produção de café envolve uma série de práticas agrícolas, desde o plantio e colheita até o beneficiamento e comercialização.",
+          "principal_produtor": "Minas Gerais",
+          "estados_produtores": [
+              "São Paulo",
+              "Espírito Santo",
+              "Bahia",
+              "Paraná",
+              "Rio de Janeiro"
+          ],
+          "link_imagem": "cafe.jpg"
+      },
+      {
+          "nome": "Arroz",
+          "descricao": "O arroz é uma das principais culturas agrícolas do Brasil, sendo cultivado em diferentes regiões do país, com destaque para os estados da Região Sul, como Rio Grande do Sul e Santa Catarina. Além de ser uma importante fonte de carboidratos na alimentação humana, o arroz também desempenha um papel relevante na economia rural e na geração de empregos. A produção de arroz envolve técnicas específicas de cultivo e manejo, visando garantir a qualidade e a produtividade da cultura.",
+          "principal_produtor": "Rio Grande do Sul",
+          "estados_produtores": [
+              "Santa Catarina",
+              "Paraná",
+              "Mato Grosso",
+              "São Paulo",
+              "Maranhão"
+          ],
+          "link_imagem": "arroz.jpg"
+      },
+      {
+          "nome": "Fruticultura",
+          "descricao": "A fruticultura abrange uma grande variedade de culturas frutíferas, incluindo banana, maçã, uva, manga, laranja, entre outras. No Brasil, a fruticultura é uma atividade econômica importante, contribuindo para a geração de renda e emprego em diversas regiões do país. Além de ser uma fonte de alimentos saudáveis e nutritivos, a fruticultura também desempenha um papel importante na diversificação da agricultura e na conservação da biodiversidade.",
+          "principal_produtor": "Rio Grande do Norte",
+          "estados_produtores": [
+              "Bahia",
+              "São Paulo",
+              "Minas Gerais",
+              "Pernambuco",
+              "Ceará"
+          ],
+          "link_imagem": "fruticultura.jpg"
+      },
+      {
+          "nome": "Avicultura",
+          "descricao": "A avicultura é uma atividade econômica importante no Brasil, envolvendo a criação e produção de aves para diferentes finalidades, como consumo humano, produção de ovos e obtenção de subprodutos. O Brasil é um dos maiores produtores de carne de frango do mundo, destacando-se pela qualidade e competitividade do setor avícola. A avicultura é realizada em diferentes estados do país, com destaque para os estados do Sul e Sudeste.",
+          "principal_produtor": "Santa Catarina",
+          "estados_produtores": [
+              "Paraná",
+              "Rio Grande do Sul",
+              "São Paulo",
+              "Minas Gerais"
+          ],
+          "link_imagem": "avicultura.jpg"
+      }
+  ]
+}
