@@ -1,0 +1,187 @@
+@import './base.css';
+
+h1,
+h2,
+h3 {
+  font-family: var(--body-font);
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 20px 0;
+}
+
+p {
+  color: var(--title-color);
+  margin-bottom: 1em;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1320px;
+  padding: 1rem 1.5rem;
+}
+
+.alignright {
+  float: right;
+}
+
+.alignleft {
+  float: left;
+}
+
+picture img {
+  border-radius: 1%;
+  margin: 0 0 8px 8px;
+}
+
+@media (max-width: 768px) {
+  picture img {
+    width: 100%;
+    height: 100%;
+    margin: 0 0 1rem 0;
+    clear: both;
+  }
+}
+
+/* culturas */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.coluna-esquerda {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.coluna-direita {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .coluna-esquerda,
+  .coluna-direita {
+    width: 100%;
+  }
+
+  .coluna-direita {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+}
+
+/* culturas-container */
+
+.cultura-vazio {
+  padding: 40px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cultura-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 1.5rem 0;
+  border: 1px solid var(--primary-color);
+  padding: 15px;
+  border-radius: 1%;
+  background-color: var(--primary-color);
+}
+
+.cultura-container h2 {
+  color: #fff;
+}
+
+.cultura-container img {
+  border-radius: 1%;
+}
+
+.cultura-item {
+  display: flex;
+  flex-direction: row;
+}
+
+.cultura-detalhes p {
+  text-align: justify;
+  color: #fff;
+}
+
+.cultura-detalhes {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+}
+
+@media (max-width: 768px) {
+  .cultura-item {
+    flex-direction: column;
+  }
+
+  .cultura-container img {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .cultura-detalhes {
+    margin: 0 auto;
+  }
+}
+
+/* select */
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.select-culturas,
+.select-estados {
+  padding-left: 15px;
+}
+
+.select-culturas,
+.select-estados p {
+  font-family: var(--body-font);
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .select-culturas,
+  .select-estados {
+    padding: 0;
+  }
+}
