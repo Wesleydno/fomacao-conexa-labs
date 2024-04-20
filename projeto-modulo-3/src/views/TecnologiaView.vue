@@ -68,4 +68,7 @@
 </template>
 
 <style>
+article{
+  text-align: justify;
+}
 </style>
