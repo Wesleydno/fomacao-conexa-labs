@@ -52,7 +52,7 @@ main {
 
 picture img {
   border-radius: 4px;
-  margin: 0 0 8px 8px;
+  margin: 8px 0px 0px 16px;
 }
 
 @media (max-width: 768px) {
