@@ -6,19 +6,30 @@ const route = useRoute()
 const breadcrumb = computed(() => {
     return route.name;
 })
+
+const isNoticiaPage = computed(() => route.name === 'Notícia');
+
 </script>
 
 <template>
     <div class="breadcrumbs" v-if="breadcrumb !== 'Home'">
-        <span>
+        <div v-if="!isNoticiaPage">
             <span>
                 <RouterLink to="/">Início</RouterLink>
             </span>
-            <span class="separator">»</span>
+            <span class="separator">&raquo;</span>
             <span>
-                <strong>{{ breadcrumb }}</strong>
+                <strong>{{ breadcrumb }} </strong>
             </span>
-        </span>
+        </div>
+        <div v-if="isNoticiaPage">
+            <span class="separator">&laquo;</span>
+            <span>
+                <RouterLink to="/noticias">
+                    <strong>Voltar para listagem</strong>
+                </RouterLink>
+            </span>
+        </div>
     </div>
 </template>
 
