@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -9,8 +10,19 @@ const router = createRouter({
       component: HomeView,
       meta: {
         headline: {
-          title: "Brasil Agrícola",
-          description: "Explorando as Riquezas Agrícolas de Cada Estado Brasileiro",
+          titulo: "Brasil Agrícola",
+          subtitulo: "Explorando as Riquezas Agrícolas de Cada Estado Brasileiro",
+        },
+      },
+    },
+    {
+      path: '/noticias',
+      name: 'Notícias',
+      component: () => import('../views/ListaNoticiasView.vue'),
+      meta: {
+        headline: {
+          titulo: "Notícias",
+          subtitulo: "",
         },
       },
     },
@@ -20,8 +32,8 @@ const router = createRouter({
       component: () => import('../views/ProdutoresView.vue'),
       meta: {
         headline: {
-          title: "Principais Produtores",
-          description: "",
+          titulo: "Principais Produtores",
+          subtitulo: "",
         },
       },
     },
@@ -31,8 +43,8 @@ const router = createRouter({
       component: () => import('../views/CulturasView.vue'),
       meta: {
         headline: {
-          title: "Principais Culturas",
-          description: "",
+          titulo: "Principais Culturas",
+          subtitulo: "",
         },
       },
     },
@@ -42,8 +54,8 @@ const router = createRouter({
       component: () => import('../views/TecnologiaView.vue'),
       meta: {
         headline: {
-          title: "Tecnologia",
-          description: "",
+          titulo: "Tecnologia",
+          subtitulo: "",
         },
       },
     }
