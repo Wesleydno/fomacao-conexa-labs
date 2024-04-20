@@ -1,45 +1,57 @@
-# projeto-modulo-3
+# Projeto Módulo 3
 
-This template should help get you started developing with Vue 3 in Vite.
+Neste módulo, decidi utilizar o Vue 3, pois as aulas foram direcionadas para TypeScript e orientação a objetos, o que cria um ambiente favorável para isso.
 
-## Recommended IDE Setup
+Todas as páginas foram convertidas para componentes, assim como as funcionalidades, e todas estão utilizando tipagem TypeScript. Até o momento, continuamos a ler um arquivo .json com os dados, porém nos próximos módulos iremos consumir uma API.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Alguns updates foram feitos no layout, como, por exemplo, nos cards das páginas de produtores e culturas. À medida que o curso avança, novas funcionalidades serão aplicadas a este projeto.
 
-## Type Support for `.vue` Imports in TS
+![Página de Início](/projeto-modulo-3/src/docs/cards-culturas.png)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+Mais uma página foi criada para mostrar notícias relacionadas ao agro.
 
-## Customize configuration
+![Página de Início](/projeto-modulo-3/src/docs/pagina-noticias.png)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Detalhes da notícias
 
-## Project Setup
+![Página de Início](/projeto-modulo-3/src/docs/noticia-detalhe.png)
+
+
+Cursos do módulo:
+
+- TypeScript Essential Training
+- TypeScript: Object-Oriented Programming
+
+### Como rodar o projeto ?
+
+Faça o download do projeto
+
+```sh
+git clone https://github.com/Wesleydno/formacao-conexa-labs.git
+```
+
+Com o projeto já baixado na máquina, acesse o diretório projeto-modulo-3
+
+```sh
+cd projeto-modulo-3
+```
+
+Instale as dependencias do projeto
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+Rode o projeto em desenvolvimento
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Acesse o endereço
 
 ```sh
-npm run build
+http://localhost:5173/
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+😊
