@@ -23,6 +23,9 @@ function closeMenu() {
 
       <ul class="nav-menu" :class="{ 'active': isMenuOpen }">
         <li class="nav-item">
+          <RouterLink @click="closeMenu" to="/">INÍCIO</RouterLink>
+        </li>
+        <li class="nav-item">
           <RouterLink @click="closeMenu" to="/noticias">NOTÍCIAS</RouterLink>
         </li>
         <li class="nav-item">
