@@ -1,25 +1,40 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { useRoute } from 'vue-router'
+import { useRoute } from 'vue-router';
+import noticiasJson from "../data/noticias.json";
 
-interface IHeadlineItem {
-    title: string
-    description: string
+interface INoticia {
+    titulo: string;
+    subtitulo: string;
+    conteudo: string[];
+    slug: string;
+    tema: string;
+}
+
+function getNoticiaBySlug(slug: string) {
+    return noticiasJson.find((noticia: INoticia) => noticia.slug === slug);
 }
 
 const route = useRoute();
-const headline = computed(() => (route.meta.headline as IHeadlineItem) ?? { title: '', description: '' });
-const isHomePage = computed(() => {
-    return route.name === 'Home';
-})
 
+const noticia = computed(() => {
+    if (route.name === 'Notícia') {
+        return getNoticiaBySlug(route.params.slug as string);
+    } else if (route.meta.headline) {
+        return route.meta.headline as INoticia;
+    } else {
+        return { titulo: '', subtitulo: '' };
+    }
+});
+
+const isHomePage = computed(() => route.name === 'Home' || route.name === 'Notícia');
 </script>
 
 <template>
     <div :class="{ 'headline': true, 'principal': isHomePage }">
         <div class="content-wrapper">
-            <h1>{{ headline.title }}</h1>
-            <h2 v-if="headline.description">{{ headline.description }}</h2>
+            <h1>{{ noticia?.titulo }}</h1>
+            <h2 v-if="noticia?.subtitulo">{{ noticia?.subtitulo }}</h2>
         </div>
     </div>
 </template>
