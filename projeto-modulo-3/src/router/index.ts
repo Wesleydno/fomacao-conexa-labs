@@ -27,6 +27,17 @@ const router = createRouter({
       },
     },
     {
+      path: '/noticias/:slug',
+      name: 'Notícia',
+      component: () => import('../views/DetalhesNoticiaView.vue'),
+      meta: {
+        headline: {
+          titulo: "",
+          subtitulo: "",
+        },
+      },
+    },
+    {
       path: '/produtores',
       name: 'Produtores',
       component: () => import('../views/ProdutoresView.vue'),
