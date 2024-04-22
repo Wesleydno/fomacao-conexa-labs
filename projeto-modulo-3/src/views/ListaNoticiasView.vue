@@ -31,7 +31,7 @@ export default defineComponent({
         <article v-for="noticia in noticias" :key="noticia.slug" class="noticia">
           <RouterLink :to="'/noticias/' + noticia.slug">
             <strong>
-              <h3 class="titulo primary-color">{{ noticia.titulo }}</h3>
+              <h2 class="titulo primary-color">{{ noticia.titulo }}</h2>
             </strong>
           </RouterLink>
           <p>{{ noticia.conteudo[0] }}...</p>
