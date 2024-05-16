@@ -13,6 +13,8 @@ dist
 dist-ssr
 coverage
 *.local
+.nx
+.vite
 
 /cypress/videos/
 /cypress/screenshots/
